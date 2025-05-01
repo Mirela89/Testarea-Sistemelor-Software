@@ -81,14 +81,19 @@ Această etapă inițială a oferit o înțelegere clară a uneltelor QA pentru 
   Recomandări pentru dezvoltatorii de unelte QA:
 
   • Creșterea acoperirii regulilor, în special pentru domenii specifice. 
+  
   • Oferirea unei interfețe simple pentru ajustarea granularității și extinderea regulilor.
+  
   • Combinarea uneltelor cu focus diferit (de ex. Infer) pentru a crește rata de detecție și a reduce fals-pozitivele.
+  
   • Optimizarea paralelismului atât la nivel de reguli, cât și de module de scanare, adaptându-se la dimensiunea proiectelor
 
   Ghid pentru utilizatorii de unelte QA:
 
   •	În domenii specifice, fie rescrierea regulilor (PMD, Semgrep), fie alegerea unei unelte focalizate (de ex. Infer).
+  
   •	Pentru securitate, utilizarea unor SAST dedicate, nu unelte generale.
+  
   •	În proiecte mari, evitarea SonarQube din cauza performanței
 
 ## 10. Testarea uneltelor QA
