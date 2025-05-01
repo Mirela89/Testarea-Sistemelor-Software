@@ -88,6 +88,8 @@ Această etapă inițială a oferit o înțelegere clară a uneltelor QA pentru 
   
   • Optimizarea paralelismului atât la nivel de reguli, cât și de module de scanare, adaptându-se la dimensiunea proiectelor
 
+  
+
   Ghid pentru utilizatorii de unelte QA:
 
   •	În domenii specifice, fie rescrierea regulilor (PMD, Semgrep), fie alegerea unei unelte focalizate (de ex. Infer).
