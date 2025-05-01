@@ -72,7 +72,44 @@ Pe lângă studiul principal de la ISSTA 2023, am consultat și alte lucrări re
 
 Această etapă inițială a oferit o înțelegere clară a uneltelor QA pentru Java. S-au identificat diferențe importante în ceea ce privește acoperirea, granularitatea regulilor și performanța în timp. Aceste informații vor ghida implementarea și testarea ulterioară a sistemului.
 
-## 9. Referinţe
+## Etapa 2
+
+  In cadrul etapei 2, am continuat studiul conceptelor prezentate in articolul "A Comprehensive Study on Quality Assurance Tools for Java" (ISSTA 2023) si am testat cele 6 tool-uri analizate de catre autori: SonarQube, SpotBugs, Error Prone, Infer, PMD și Semgrep.
+
+## 9. Continuarea analizei articolului - recomandarile autorilor
+
+  Recomandări pentru dezvoltatorii de unelte QA:
+
+  • Creșterea acoperirii regulilor, în special pentru domenii specifice. 
+  • Oferirea unei interfețe simple pentru ajustarea granularității și extinderea regulilor.
+  • Combinarea uneltelor cu focus diferit (de ex. Infer) pentru a crește rata de detecție și a reduce fals-pozitivele.
+  • Optimizarea paralelismului atât la nivel de reguli, cât și de module de scanare, adaptându-se la dimensiunea proiectelor
+
+  Ghid pentru utilizatorii de unelte QA:
+
+  •	În domenii specifice, fie rescrierea regulilor (PMD, Semgrep), fie alegerea unei unelte focalizate (de ex. Infer).
+  •	Pentru securitate, utilizarea unor SAST dedicate, nu unelte generale.
+  •	În proiecte mari, evitarea SonarQube din cauza performanței
+
+## 10. Testarea uneltelor QA
+
+  Primul software de testare analizat este Error Prone, pe care l-am integrat in IntelliJ si am obtinut rezultatul din figura de mai jos:
+
+  ![image](https://github.com/user-attachments/assets/4f63b67c-68e2-419c-b49a-823d1478a3d8)
+  Figura 1 – eroarea detectata de tool-ul Error Prone intr-un proiect Java
+
+  Urmatorul software pe care l-am instalat este SonarQube, integrat de asemenea in Intellij. Eroarea detectata de SonarQube este evidentiata in figura de mai jos:
+
+  ![image](https://github.com/user-attachments/assets/4e7f7b13-db44-4368-b673-97f87d0597aa)
+  Figura 2 - eroarea detectata de tool-ul SonarQube intr-un proiect Java
+
+  Cel de-al treilea software de testare cu care am lucrat este Postman, in care am introdus o cerere de tip GET pentru url-ul http://localhost:8080/users/all, definit intr-un controller:
+
+  ![image](https://github.com/user-attachments/assets/73c02548-e1ae-448d-a9b6-ec9a9b3dad89)
+  Figura 3 - rezultatul obtinut in urma cererii in Postman
+
+
+## 11. Referinţe
 
 1. Valentina, Lenarduzzi, _A Critical Comparison on Six Static Analysis Tools: Detection, Agreement, and Precision_, arXiv, [online], [url](https://arxiv.org/pdf/2101.08832), accesat la 9 aprilie 2025.  
 2. Jones, Yeboah, _Efficacy of static analysis tools for software defect detection on open-source projects_, arXiv, [online], [url](https://arxiv.org/pdf/2405.12333), accesat la 9 aprilie 2025.  
