@@ -2,14 +2,14 @@
 
 ## 1. Introducere
 
-Lucrarea de față se bazează pe articolul _"A Comprehensive Study on Quality Assurance Tools for Java"_ (ISSTA 2023), care oferă o analiză detaliată asupra a șase unelte de Quality Assurance (QA) utilizate frecvent în proiecte Java: **SonarQube**, **SpotBugs**, **Error Prone**, **Infer**, **PMD** și **Semgrep**. Scopul acestui proiect este generarea de rapoarte automatizate și interpretarea rezultatelor pentru a identifica puncte tari și slabe ale fiecărui tool.
+Lucrarea de față se bazează pe articolul _"A Comprehensive Study on Quality Assurance Tools for Java"_ (ISSTA 2023), care oferă o analiză detaliată asupra a șase unelte de Quality Assurance (QA) utilizate frecvent în proiecte Java: **SonarQube**, **SpotBugs**, **Error Prone**, **Infer**, **PMD** și **Semgrep**. Scopul principal este **determinarea celui mai eficient tool QA** pentru uzul studenților la facultate, pe baza unor criterii de ușurință în utilizare, performanță, acuratețe a avertismentelor și integrabilitate în workflow-ul de dezvoltare.
 
-## 2. Definiții esențiale
+## 2. Obiective
 
-- **Quality Assurance Tools**: unelte software folosite pentru detectarea automată a bug-urilor, defectelor sau a practicilor de programare necorespunzătoare.
-- **Scanning Rules**: reguli utilizate de aceste unelte pentru a analiza codul sursă.
-- **CWE (Common Weakness Enumeration)**: standard internațional pentru clasificarea slăbiciunilor software.
-- **Granularitate a regulilor**: nivelul de detaliere cu care o unealtă de QA își definește regulile de scanare, determinând capacitatea acesteia de a detecta nu doar probleme generale, ci și defecte specifice.
+- Rularea și configurarea celor șase unelte QA pe aplicația de E-ticketing, folosind **IntelliJ IDEA Community Edition** ca mediu de dezvoltare. 
+- Colectarea și compararea numărului de avertismente și a ratei de „true positives” pentru fiecare tool.  
+- Măsurarea timpilor de execuție și evaluarea complexității setup-ului.  
+- Analiza calitativă și cantitativă a rezultatelor pentru a desemna **cel mai potrivit tool** pentru proiecte studențești.
 
 ## 3. Articol științific utilizat
 
@@ -195,32 +195,58 @@ Cel de-al treilea software de testare cu care am lucrat este Postman, in care am
 </details>
 
 
-## 8. Continuarea analizei articolului - recomandarile autorilor
+## 8. Concluzii asupra uneltelor QA testate
 
-  Recomandări pentru dezvoltatorii de unelte QA:
+După rularea și compararea a șase unelte de asigurare a calității pe proiectul E-ticketing, tragem următoarele concluzii:
 
-  • Creșterea acoperirii regulilor, în special pentru domenii specifice. 
-  
-  • Oferirea unei interfețe simple pentru ajustarea granularității și extinderea regulilor.
-  
-  • Combinarea uneltelor cu focus diferit (de ex. Infer) pentru a crește rata de detecție și a reduce fals-pozitivele.
-  
-  • Optimizarea paralelismului atât la nivel de reguli, cât și de module de scanare, adaptându-se la dimensiunea proiectelor
-  
+- **SonarQube**  
+  - **Puncte tari:** acoperire largă a regulilor CWE, dashboard web intuitiv, integrare CI/CD.  
+  - **Puncte slabe:** necesită setare inițială (server/Docker), execuție mai lentă pe proiecte mari.  
+  - **Recomandare:** ideal pentru proiecte de echipă și pipeline-uri de laborator.
 
-  Ghid pentru utilizatorii de unelte QA:
+- **SpotBugs 4.7.0**  
+  - **Puncte tari:** detecție precisă de bug-patterns (null-pointer, concurență), integrare Maven/IDE facilă.  
+  - **Puncte slabe:** acoperire mai redusă față de SonarQube, necesita configurare a rule-set-ului.  
+  - **Recomandare:** excelent ca prim tool pentru studenți, datorită simplității și preciziei.
 
-  •	În domenii specifice, fie rescrierea regulilor (PMD, Semgrep), fie alegerea unei unelte focalizate (de ex. Infer).
-  
-  •	Pentru securitate, utilizarea unor SAST dedicate, nu unelte generale.
-  
-  •	În proiecte mari, evitarea SonarQube din cauza performanței
+- **Error Prone**  
+  - **Puncte tari:** interceptare la compilare, feedback imediat în editor, zero‐config.  
+  - **Puncte slabe:** acoperire CWE limitată, depinde de API-ul Java compiler.  
+  - **Recomandare:** folosit împreună cu SpotBugs pentru validări compile-time rapide.
+
+- **PMD 6.41.0**  
+  - **Puncte tari:** rulare foarte rapidă, multitudine de reguli, suport Maven/CLI.  
+  - **Puncte slabe:** multe false positives (cod style și documentație), necesită filtrare.  
+  - **Recomandare:** util pentru verificări rapide de stil și practici, în combinație cu alte tool-uri.
+
+- **Infer**  
+  - **Puncte tari:** detectare avansată a problemelor legate de memorie și concurență.  
+  - **Puncte slabe:** timp de execuție mare pe proiecte Maven, integrare CLI mai greoaie.  
+  - **Recomandare:** folosit ocazional pentru audituri punctuale, nu ca instrument principal de curs.
+
+- **Semgrep 0.81.0**  
+  - **Puncte tari:** reguli customizabile, focus pe securitate și pattern-matching.  
+  - **Puncte slabe:** cea mai lentă execuție, configurare YAML obligatorie.  
+  - **Recomandare:** pentru laboratoare avansate de securitate și reguli proprii.
+
+---
+
+**Sinteză recomandări pentru studenți:**  
+- **Prim tool:** SpotBugs – instalare și rulare simple, alertă de calitate precisă.  
+- **Completare compile-time:** Error Prone – feedback imediat la cod.  
+- **Verificări stil & practici:** PMD – rapid, multe reguli.  
+- **Audit avansat & securitate:** SonarQube & Semgrep – pentru proiecte mari și reguli custom.  
+- **Audit memorie/concurență:** Infer – pentru case study punctuale.  
+
 
 ## 9. Raport despre folosirea unui tool de AI
+TO-DO
 
 ## 10. Diagrame
+TO-DO
 
 ## 11. Video
+TO-DO
 
 ## 12. Referinţe
 
