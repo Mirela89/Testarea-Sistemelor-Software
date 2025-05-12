@@ -64,16 +64,37 @@ Pe lângă studiul principal de la ISSTA 2023, am consultat și alte lucrări re
 
 ## 7. Descărcare și Utilizare a Uneltelor QA
 
-În această secțiune descriem pașii de instalare și rulare pentru fiecare tool. La finalul fiecărei explicații se includ capturi de ecran reprezentative.
+În această secțiune descriem pașii de instalare și rulare pentru fiecare tool. La finalul fiecărei explicații se află capturi de ecran reprezentative.
 
 <details>
 <summary>SonarQube</summary>
 <br>
-  Versiune: ?
-Urmatorul software pe care l-am instalat este SonarQube, integrat de asemenea in Intellij. Eroarea detectata de SonarQube este evidentiata in figura de mai jos:
+  Versiune: 10.22.0.81244
+  
+  **Instalare în IntelliJ IDEA (Community/Ultimate):**  
+1. Mergi la **File → Settings → Plugins** (sau `Ctrl+Alt+S`).  
+2. Deschide tab-ul **Marketplace**, caută **“SonarQube for IDE”** (de la SonarSource) și apasă **Install**.  
+3. Repornește IDE.
+
+**Configurare conexiune la server SonarQube:**  
+1. În **File → Settings → Tools → SonarQube** → **Connections**, click pe **+** și adaugă:  
+   - **Name:** `LocalSonar`  
+   - **Server URL:** `http://localhost:9000`  
+   - **Token:** `<token-ul tău>`  
+2. În **Project Settings** apasă **Bind** și selectează proiectul tău din server.
+
+**Utilizare:**  
+1. În **Project View**, dă click-dreapta pe rădăcina proiectului → **SonarQube → Analyze Project**.  
+2. Așteaptă finalizarea analizei; vei vedea problemele listate în panoul **SonarQube**.  
+3. Pentru export:
+   - Click pe iconița de **Export** (în colțul dreapta-sus al panoului SonarQube).  
+   - Alege **Export as HTML** sau **Export as XML** și salvează în `docs/screenshots/sonarqube-report.html` (sau `.xml`).
+
+**Imagini**
 
   ![image](https://github.com/user-attachments/assets/4e7f7b13-db44-4368-b673-97f87d0597aa)
-  Figura 2 - eroarea detectata de tool-ul SonarQube intr-un proiect Java
+  Figura 1 - eroarea detectata de tool-ul SonarQube intr-un proiect Java
+  
 </details>
 
 
@@ -95,19 +116,33 @@ Versiune: 1.2.8
    - Alege **Export as HTML** sau **Export as XML** și salvează.
 
 **Imagini**
+
 ![SpotBugs2](https://github.com/user-attachments/assets/9516657e-afc3-4a14-90b2-2fab2a860626)
-Figura x - erorile detectate de tool-ul SpotBugs
+Figura 2 - erorile detectate de tool-ul SpotBugs
+
 </details>
 
 
 <details>
 <summary>ErrorProne</summary>
 <br>
-  Versiune: ?
-Primul software de testare analizat este Error Prone, pe care l-am integrat in IntelliJ si am obtinut rezultatul din figura de mai jos:
+  Versiune: 243.21565.129
+  
+  **Instalare în IntelliJ IDEA (Community/Ultimate):**  
+1. Mergi la **File → Settings → Plugins** (sau `Ctrl+Alt+S`).  
+2. Deschide tab-ul **Marketplace**, caută **“Error Prone Compiler”** și apasă **Install**.  
+3. După instalare, mergi la **File → Settings → Build, Execution, Deployment → Compiler → Java Compiler** și selectează la **Use compiler** opțiunea **`Javac with error-prone`**.  
+4. Repornește IDE.
+
+**Utilizare:**  
+1. Orice compilare (Build → Build Project) va fi interceptată de Error Prone.  
+2. Erorile şi warning-urile vor apărea în panoul **Problems** și marcate direct în editor.
+
+**Imagini**
 
   ![image](https://github.com/user-attachments/assets/4f63b67c-68e2-419c-b49a-823d1478a3d8)
-  Figura 1 – eroarea detectata de tool-ul Error Prone intr-un proiect Java
+  Figura 3 – eroarea detectata de tool-ul Error Prone intr-un proiect Java
+  
 </details>
 
 
@@ -130,12 +165,16 @@ This is how you dropdown.
   3. Repornește IDE.
 
 **Utilizare:**  
-1. În **Project View**, dă click-dreapta pe rădăcina proiectului → **Run PMD → **.  
-2. După finalizarea analizei, fereastra de rezultate va arăta lista de bug-patterns găsite.  
-3. Poți exporta raportul astfel:
-   - Click pe iconița de **Export** (în colțul dreapta-sus al ferestrei SpotBugs Results).
+1. În **Project View**, dă click-dreapta pe rădăcina proiectului → **Run PMD → Check code with PMD**.  
+2. Așteaptă până PMD scanează întregul cod; rezultatele apar într-un panou **PMD**.  
+3. Pentru export:
+   - Click pe iconița de **Export** (în colțul stanga-jos al ferestrei PMD Results).  
    - Alege **Export as HTML** sau **Export as XML** și salvează.
   
+**Imagini**
+![PMD2](https://github.com/user-attachments/assets/a6ed4859-6c20-4b20-873f-e479ad2c1669)
+Figura x - eroarea detectata de tool-ul PMD intr-un proiect Java
+
 </details>
 
 
