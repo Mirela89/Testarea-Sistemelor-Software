@@ -147,14 +147,6 @@ Figura 2 - erorile detectate de tool-ul SpotBugs
 
 
 <details>
-<summary>Infer</summary>
-<br>
-  Versiune: ?
-This is how you dropdown.
-</details>
-
-
-<details>
 <summary>PMD</summary>
 <br>
   Versiune: 2.0.6
@@ -173,7 +165,7 @@ This is how you dropdown.
   
 **Imagini**
 ![PMD2](https://github.com/user-attachments/assets/a6ed4859-6c20-4b20-873f-e479ad2c1669)
-Figura x - eroarea detectata de tool-ul PMD intr-un proiect Java
+Figura 4 - eroarea detectata de tool-ul PMD intr-un proiect Java
 
 </details>
 
@@ -181,7 +173,8 @@ Figura x - eroarea detectata de tool-ul PMD intr-un proiect Java
 <details>
 <summary>Semgrep</summary>
 <br>
-  Versiune: ?
+  Versiune: 1.122.0
+  
   Semgrep nu există ca plugin direct în IntelliJ, așa că vom rula analiza local folosind CLI:
 
   1. **Urmează ghidul oficial CLI**  
@@ -195,22 +188,28 @@ Figura x - eroarea detectata de tool-ul PMD intr-un proiect Java
      # Scanează tot proiectul
      docker run --rm \
        -v "$(pwd)":/src \
-       returntocorp/semgrep \
+       semgrep/semgrep \
        semgrep --config auto /src
      ```
 
 **Imagini**
-TO DO
+
+![image](https://github.com/user-attachments/assets/c6ce89dc-ae23-4a84-be3b-1026938dc866)
+Figura 5 - eroarea detectata de tool-ul Semgrep
+
 </details>
 
 
 <details>
-<summary>Postman?</summary>
+<summary>Postman</summary>
 <br>
-Cel de-al treilea software de testare cu care am lucrat este Postman, in care am introdus o cerere de tip GET pentru url-ul http://localhost:8080/users/all, definit intr-un controller:
-
+  Versiune: ?
+  TO-DO
+  
+  **Imagini**
+  
   ![image](https://github.com/user-attachments/assets/73c02548-e1ae-448d-a9b6-ec9a9b3dad89)
-  Figura 3 - rezultatul obtinut in urma cererii in Postman
+  Figura 6 - rezultatul obtinut in urma cererii in Postman
 </details>
 
 
@@ -223,7 +222,7 @@ După rularea și compararea a șase unelte de asigurare a calității pe proiec
   - **Puncte slabe:** necesită setare inițială (server/Docker), execuție mai lentă pe proiecte mari.  
   - **Recomandare:** ideal pentru proiecte de echipă și pipeline-uri de laborator.
 
-- **SpotBugs 4.7.0**  
+- **SpotBugs**  
   - **Puncte tari:** detecție precisă de bug-patterns (null-pointer, concurență), integrare Maven/IDE facilă.  
   - **Puncte slabe:** acoperire mai redusă față de SonarQube, necesita configurare a rule-set-ului.  
   - **Recomandare:** excelent ca prim tool pentru studenți, datorită simplității și preciziei.
@@ -233,17 +232,17 @@ După rularea și compararea a șase unelte de asigurare a calității pe proiec
   - **Puncte slabe:** acoperire CWE limitată, depinde de API-ul Java compiler.  
   - **Recomandare:** folosit împreună cu SpotBugs pentru validări compile-time rapide.
 
-- **PMD 6.41.0**  
+- **PMD**  
   - **Puncte tari:** rulare foarte rapidă, multitudine de reguli, suport Maven/CLI.  
   - **Puncte slabe:** multe false positives (cod style și documentație), necesită filtrare.  
   - **Recomandare:** util pentru verificări rapide de stil și practici, în combinație cu alte tool-uri.
 
-- **Infer**  
-  - **Puncte tari:** detectare avansată a problemelor legate de memorie și concurență.  
-  - **Puncte slabe:** timp de execuție mare pe proiecte Maven, integrare CLI mai greoaie.  
-  - **Recomandare:** folosit ocazional pentru audituri punctuale, nu ca instrument principal de curs.
+- **Postman**  
+  - **Puncte tari:** 
+  - **Puncte slabe:**   
+  - **Recomandare:** 
 
-- **Semgrep 0.81.0**  
+- **Semgrep**  
   - **Puncte tari:** reguli customizabile, focus pe securitate și pattern-matching.  
   - **Puncte slabe:** cea mai lentă execuție, configurare YAML obligatorie.  
   - **Recomandare:** pentru laboratoare avansate de securitate și reguli proprii.
@@ -255,7 +254,7 @@ După rularea și compararea a șase unelte de asigurare a calității pe proiec
 - **Completare compile-time:** Error Prone – feedback imediat la cod.  
 - **Verificări stil & practici:** PMD – rapid, multe reguli.  
 - **Audit avansat & securitate:** SonarQube & Semgrep – pentru proiecte mari și reguli custom.  
-- **Audit memorie/concurență:** Infer – pentru case study punctuale.  
+- **Audit memorie/concurență:** Infer – pentru case study punctuale.  ??
 
 
 ## 9. Raport despre folosirea unui tool de AI
