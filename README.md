@@ -182,6 +182,25 @@ Figura x - eroarea detectata de tool-ul PMD intr-un proiect Java
 <summary>Semgrep</summary>
 <br>
   Versiune: ?
+  Semgrep nu există ca plugin direct în IntelliJ, așa că vom rula analiza local folosind CLI:
+
+  1. **Urmează ghidul oficial CLI**  
+      https://theinfosecguy.medium.com/how-to-install-semgrep-a-comprehensive-guide-for-developers-4531b8eb3754
+
+  2. **Exemplu de rulare cu Docker**  
+     ```bash
+     # Descarcă imaginea oficială
+     docker pull semgrep/semgrep
+
+     # Scanează tot proiectul
+     docker run --rm \
+       -v "$(pwd)":/src \
+       returntocorp/semgrep \
+       semgrep --config auto /src
+     ```
+
+**Imagini**
+TO DO
 </details>
 
 
