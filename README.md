@@ -306,7 +306,7 @@ După rularea și compararea a șase unelte de asigurare a calității pe proiec
 - **Completare compile-time:** Error Prone – feedback imediat la cod.  
 - **Verificări stil & practici:** PMD – rapid, multe reguli.  
 - **Audit avansat & securitate:** SonarQube & Semgrep – pentru proiecte mari și reguli custom.  
-- **Audit memorie/concurență:** Infer – pentru case study punctuale.  ??
+- **Audit memorie/concurență:** Potsman – pentru case study punctuale.
 
 
 ## 9. Raport despre folosirea unui tool de AI
@@ -327,6 +327,11 @@ După rularea și compararea a șase unelte de asigurare a calității pe proiec
 
 * Sa se verifice informatiile furnizate acolo unde se poate, mai ales in zona de securitate cibernetica.
 * Sa se foloseasca doar pentru prototiparea rapidă a testelor, apoi sa se refactorizeze manual.
+
+**Imagini**
+![image](https://github.com/user-attachments/assets/836ef678-10b5-49c3-bc5b-fea0dea6e403)
+![image](https://github.com/user-attachments/assets/121f52c6-e955-496f-ab76-33c7b84e69b3)
+![image](https://github.com/user-attachments/assets/cf9a3e7e-8b80-498d-b205-8794fdd01a7c)
 
 
 ## 10. Diagrame
