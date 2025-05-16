@@ -203,8 +203,60 @@ Figura 5 - eroarea detectata de tool-ul Semgrep
 <details>
 <summary>Postman</summary>
 <br>
-  Versiune: ?
-  TO-DO
+  Versiune:  v11.45.6
+
+  Postman nu exista ca plugin direct in IntelliJ, asa ca il vom descrca drept aplicatie independenta si vom accesa din el api-urile definite in aplicatia web.
+
+  **Descarcă aplicația**
+
+  Accesează https://www.postman.com/downloads/
+
+  Alege varianta pentru sistemul tău de operare (Windows, macOS sau Linux) și descarcă installer-ul.
+
+  **Instalare pe Windows**
+
+  Rulează fișierul .exe descărcat.
+
+  Urmează pașii din wizard: „Next” → „Install”.
+
+  La final, dă „Finish” și Postman va porni automat.
+
+  **Instalare pe macOS**
+
+  Deschide fișierul .zip descărcat; va extrage aplicația Postman.
+
+  Trage iconița Postman în folderul Applications.
+
+  Deschide Applications și lansează Postman.
+
+  **Primii pași**
+
+  Creează-ți un cont Postman sau autentifică-te cu unul existent.
+
+  Familiarizează-te cu interfața:
+
+  Collections (grupuri de request-uri)
+
+  Environment (variabile – ex. {{baseUrl}})
+
+  Runner (execută test suites)
+
+  **Exemplu de request în Postman**
+  
+  Tip request: GET
+
+  URL: https://postman-echo.com/get?param1=valoare1&param2=valoare2
+
+  **Cum configurezi în Postman:**
+
+  Apasă pe New → HTTP Request.
+
+  Selectează metoda GET, lipește URL-ul de mai sus.
+
+  În tab-ul Headers, adaugă cele două perechi Accept și X-Custom-Header.
+
+  Apasă Send.
+  
   
   **Imagini**
   
