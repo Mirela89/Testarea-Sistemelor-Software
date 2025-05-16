@@ -258,7 +258,24 @@ După rularea și compararea a șase unelte de asigurare a calității pe proiec
 
 
 ## 9. Raport despre folosirea unui tool de AI
-TO-DO
+
+**Avantaje**
+
+* Feedback rapid: am trimis o parte dintr-un cod Java, iar ChatGPT mi-a identificat instant eroarea de tip NullPointerException din metoda de calcul și mi-a explicat cauza.
+* Explicații clare: pe lângă diagnostic, am primit pași concreți de reparare (verificarea obiectelor înainte de folosire și adăugarea de Optional).
+* Generare automată de teste: ChatGPT mi-a sugerat un set de cazuri JUnit pentru a acoperi și scenarii de eroare.
+
+**Dezavantaje**
+
+* Context limitat: modelul nu a știut despre setup-ul complet al proiectului meu Maven și a sugerat o configurație generică de dependințe.
+* Risc de informații inexacte: uneori recomandă API-uri care nu există în versiunea curentă a bibliotecilor pe care le folosesc.
+* Necesită verificare umană: soluțiile propuse trebuie testate și adaptate manual înainte de integrare în CI.
+
+**Recomandări**
+
+* Sa se verifice informatiile furnizate acolo unde se poate, mai ales in zona de securitate cibernetica.
+* Sa se foloseasca doar pentru prototiparea rapidă a testelor, apoi sa se refactorizeze manual.
+
 
 ## 10. Diagrame
 TO-DO
