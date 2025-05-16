@@ -238,10 +238,10 @@ După rularea și compararea a șase unelte de asigurare a calității pe proiec
   - **Recomandare:** util pentru verificări rapide de stil și practici, în combinație cu alte tool-uri.
 
 - **Postman**  
-  - **Puncte tari:** 
-  - **Puncte slabe:**   
-  - **Recomandare:** 
-
+  - **Puncte tari:** interfață intuitivă și testare rapidă API.
+  - **Puncte slabe:** dependență de configurații complexe de mediu.
+  - **Recomandare:** ideal pentru testare rapidă a API-urilor.
+ 
 - **Semgrep**  
   - **Puncte tari:** reguli customizabile, focus pe securitate și pattern-matching.  
   - **Puncte slabe:** cea mai lentă execuție, configurare YAML obligatorie.  
