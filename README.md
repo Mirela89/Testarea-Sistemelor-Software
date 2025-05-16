@@ -334,13 +334,10 @@ După rularea și compararea a șase unelte de asigurare a calității pe proiec
 ![image](https://github.com/user-attachments/assets/cf9a3e7e-8b80-498d-b205-8794fdd01a7c)
 
 
-## 10. Diagrame
-TO-DO
+## 10. Video
+https://youtu.be/1M1iQn5ciNE
 
-## 11. Video
-TO-DO
-
-## 12. Referinţe
+## 11. Referinţe
 
 1. Valentina, Lenarduzzi, _A Critical Comparison on Six Static Analysis Tools: Detection, Agreement, and Precision_, arXiv, [online], [url](https://arxiv.org/pdf/2101.08832), accesat la 9 aprilie 2025.  
 2. Jones, Yeboah, _Efficacy of static analysis tools for software defect detection on open-source projects_, arXiv, [online], [url](https://arxiv.org/pdf/2405.12333), accesat la 9 aprilie 2025.  
